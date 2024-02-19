@@ -1,4 +1,4 @@
-
+/* 
 .destination_details {
     margin-top: 30px;
 }
@@ -16,6 +16,34 @@
     margin-bottom: 10px;
     border: none;
     border-radius: 20px; /* Make buttons oval shaped */
+    /* background-color: #007bff;
+    color: black;
+    cursor: not-allowed;
+} 
+
+.destination_details button:disabled {
+    background-color: #f2f1ec;
+    cursor: not-allowed;
+}  */
+
+
+.destination_details {
+    margin-top: 30px;
+}
+
+.destination_details h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.destination_details button {
+    display: inline-block; /* Change to inline-block */
+    width: auto; /* Adjust width to fit content */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px; /* Make buttons oval shaped */
     background-color: #007bff;
     color: black;
     cursor: not-allowed;
@@ -24,5 +52,6 @@
 .destination_details button:disabled {
     background-color: #f2f1ec;
     cursor: not-allowed;
+    width: auto; /* Force full width for disabled buttons */
 }
 

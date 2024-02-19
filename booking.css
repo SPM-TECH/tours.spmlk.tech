@@ -2,23 +2,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /* background: linear-gradient(to right, #00b4db, #0083b0); */
-    background-image: url(../img/banner/login_place.png);
-    background-size: cover; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-image: url(../img/place/hotel.png);  
+    background-size: cover;
 }
 
 .container {
     width: 100%;
     max-width: 400px;
+    margin: 50px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
 }
 
 h2 {
@@ -35,11 +30,12 @@ label {
     margin-bottom: 6px;
 }
 
+input[type="date"],
+input[type="number"],
 input[type="text"],
-input[type="password"],
 input[type="email"],
 input[type="tel"] {
-    width: calc(100% - 12px);
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -58,18 +54,4 @@ input[type="tel"] {
 
 .submit-button:hover {
     background-color: #0056b3;
-}
-
-.signin-link {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.signin-link a {
-    color: #28a745;
-    text-decoration: none;
-}
-
-.signin-link a:hover {
-    text-decoration: underline;
 }

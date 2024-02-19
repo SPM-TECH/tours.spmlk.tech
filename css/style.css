@@ -2810,6 +2810,27 @@ h3 {
   background-position: center center;
 }
 
+.destination_banner_wrap2 {
+  background-image: url(../img/place/2.png);
+  padding: 340px 0;
+  background-size: cover;
+  background-position: center center;
+}
+
+.destination_banner_wrap3 {
+  background-image: url(../img/place/4.png);
+  padding: 340px 0;
+  background-size: cover;
+  background-position: center center;
+}
+
+.destination_banner_wrap4 {
+  background-image: url(../img/place/5.png);
+  padding: 340px 0;
+  background-size: cover;
+  background-position: center center;
+}
+
 @media (max-width: 767px) {
   /* line 80, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_destination.scss */
   .destination_banner_wrap {
@@ -2838,6 +2859,30 @@ h3 {
   margin-bottom: 0;
 }
 
+.destination_banner_wrap2 .destination_text h3 {
+  font-size: 80px;
+  line-height: 90px;
+  color: #fff;
+  font-family: "Nothing You Could Do", cursive;
+  margin-bottom: 0;
+}
+
+.destination_banner_wrap3 .destination_text h3 {
+  font-size: 80px;
+  line-height: 90px;
+  color: #fff;
+  font-family: "Nothing You Could Do", cursive;
+  margin-bottom: 0;
+}
+
+.destination_banner_wrap4 .destination_text h3 {
+  font-size: 80px;
+  line-height: 90px;
+  color: #fff;
+  font-family: "Nothing You Could Do", cursive;
+  margin-bottom: 0;
+}
+
 @media (max-width: 767px) {
   /* line 95, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_destination.scss */
   .destination_banner_wrap .destination_text h3 {
@@ -2856,6 +2901,24 @@ h3 {
 
 /* line 110, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_destination.scss */
 .destination_banner_wrap .destination_text p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.destination_banner_wrap2 .destination_text p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.destination_banner_wrap3 .destination_text p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.destination_banner_wrap4 .destination_text p {
   font-size: 20px;
   font-weight: 400;
   color: #fff;
@@ -3107,7 +3170,7 @@ h3 {
 }
 
 /* line 21, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
-.popular_places_area .single_place .thumb .prise {
+.popular_places_area .single_place .thumb .prise{
   position: absolute;
   background: #1EC6B6;
   padding: 7px 18px 4px 18px;

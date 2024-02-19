@@ -2,9 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #00b4db, #0083b0);
-    /* background-image: url('pasi.jpg');
-    background-size: cover; */
+    background-image: url(../img/banner/login_place.png);  
+    background-size: cover; 
     display: flex;
     justify-content: center;
     align-items: center;
