@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -50,18 +50,124 @@
         </form>
     </div>
 
-    <!-- <script>
-        document.getElementById("bookingForm").addEventListener("input", function() {
-            // Retrieve the number of travelers
-            var travellers = document.getElementById("travellers").value;
-            
-            // Calculate the total price (assuming fixed price of 8000 per traveller)
-            var totalPrice = 8000 * travellers;
-            
-            // Display the total price
-            document.getElementById("totalPrice").value = totalPrice;
-        });
-    </script> -->
+   
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Details</title>
+<script>
+    function calculateTotalPrice() {
+        var adults = parseInt(document.getElementById('adults').value);
+        var children = parseInt(document.getElementById('children').value);
+        var totalPrice = (adults + children) * 8000;
+        document.getElementById('totalPrice').innerHTML = "Total Price: LKR " + totalPrice.toLocaleString();
+    }
+</script>
+</head>
+<body>
+<h2>Booking Details</h2>
+<form>
+    <label for="checkinDate">Check-in Date:</label>
+    <input type="date" id="checkinDate" name="checkinDate"><br><br>
+    
+    <label for="adults">Adults:</label>
+    <select id="adults" name="adults" onchange="calculateTotalPrice()">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        Add more options as needed -->
+    <!-- </select><br><br>
+    
+    <label for="children">Children:</label>
+    <select id="children" name="children" onchange="calculateTotalPrice()">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        Add more options as needed 
+    </select><br><br>
+    
+    <div id="totalPrice">Total Price: LKR 0</div><br>
+    
+    <input type="submit" value="Book Now">
+</form>
+</body>
+</html>  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Details</title>
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<h2>Booking Details</h2>
+
+<!-- Check-in Date -->
+<label for="checkinDate">Check-in Date:</label>
+<input type="date" id="checkinDate" name="checkinDate"><br><br>
+
+<!-- Travelers Dropdown -->
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Travelers
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#" id="adultsItem">Adults: <span id="adultsCount">0</span></a>
+    <a class="dropdown-item" href="#" id="childrenItem">Children: <span id="childrenCount">0</span></a>
+  </div>
+</div>
+
+<!-- Total Price -->
+<div id="totalPrice">Total Price: LKR 0</div><br>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var adultsCount = 0;
+    var childrenCount = 0;
+
+    // Function to update the counts displayed in the dropdown
+    function updateCounts() {
+      document.getElementById("adultsCount").innerText = adultsCount;
+      document.getElementById("childrenCount").innerText = childrenCount;
+      calculateTotalPrice(); // Update total price whenever counts change
+    }
+
+    // Increment adults count
+    document.getElementById("adultsItem").addEventListener("click", function(event) {
+      event.preventDefault();
+      adultsCount++;
+      updateCounts();
+    });
+
+    // Increment children count
+    document.getElementById("childrenItem").addEventListener("click", function(event) {
+      event.preventDefault();
+      childrenCount++;
+      updateCounts();
+    });
+
+    // Calculate total price
+    function calculateTotalPrice() {
+      var totalPrice = (adultsCount + childrenCount) * 8000;
+      document.getElementById('totalPrice').innerHTML = "Total Price: LKR " + totalPrice.toLocaleString();
+    }
+  });
+</script>
 </body>
 </html>
+
 
