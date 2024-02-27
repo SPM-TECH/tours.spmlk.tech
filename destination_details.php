@@ -1,3 +1,35 @@
+<?php
+session_start();
+
+include("db.php");
+
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+    $check = $_POST['checkin'];
+    $Travellers = $_POST['travellers'];
+    $totalPrice = $_POST['total_Price'];
+    $phonenumber = $_POST['phone_number'];
+    $cardholdername = $_POST['card_holder_name'];
+    $cardnumber = $_POST['card_number'];
+    $expirydate = $_POST['expiry_date'];
+    $cvv = $_POST['cvv']; 
+
+if(!empty($check) && !empty($Travellers) && !is_numeric($check) ){
+    $query="insert into booking (checkin,travellers,total_Price,phone_number,card_holder_name,card_number,expiry_date,cvv) 
+    values ('$check','$Travellers','$totalPrice','$phonenumber','$cardholdername','$cardnumber','$expirydate','$cvv')";
+
+    mysqli_query($conn, $query);
+
+    echo "<script type='text/javascript'> alert('Booking Successfull')</script>";
+}
+else 
+{
+    echo "<script type='text/javascript'> alert('Please Enter Valid Information`')</script>";
+}
+
+}
+
+?>
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -178,9 +210,9 @@
 </div>
                     </div>
                     <div class="bordered_1px"></div>
-                    <div class="contact_join">
+                    <!-- <div class="contact_join">
                         <h3>Booking Details</h3>
-                        <form action="#">
+                        <form action="#" method="POST">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single_input">
@@ -199,30 +231,30 @@
                                <div class="col-lg-6 col-md-6">
                                 <div class="single_input">
                                     <label for="totalPrice">Total Price:</label>
-                                    <input type="text" id="totalPrice" name="totalPrice">
+                                    <input type="text" id="totalPrice" name="total_Price">
                                 </div>
                             </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single_input">
                                         <label for="phoneNumber">Phone Number:</label>
-                                        <input type="text" id="phoneNumber" name="phoneNumber" required>
+                                        <input type="text" id="phoneNumber" name="phone_number" required>
                                     </div>
                                 </div>
                             </div>
                         </form>
                         <h3>Payment Details</h3>
-                        <form action="#">
+                        <form action="#" method="POST">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single_input">
                                         <label for="cardHolderName">Card Holder Name:</label>
-                                        <input type="text" id="cardHolderName" name="cardHolderName" required>
+                                        <input type="text" id="cardHolderName" name="card_holder_name" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single_input">
                                         <label for="cardNumber">Card Number:</label>
-                                        <input type="text" id="cardNumber" name="cardNumber" required>
+                                        <input type="text" id="cardNumber" name="card_number" required>
                                     </div>
                                 </div>
                             </div>
@@ -230,7 +262,7 @@
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single_input">
                                         <label for="expiryDate">Expiration Date:</label>
-                                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                                        <input type="text" id="expiryDate" name="expiry_date" placeholder="MM/YY" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
@@ -246,7 +278,72 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </div> -->
+                    <div class="contact_join">
+    <h3>Booking Details</h3>
+    <form action="#" method="POST">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="single_input">
+                    <label for="checkin">Check-in Date:</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="single_input">
+                    <label for="travellers">Travellers:</label>
+                    <input type="number" id="travellers" name="travellers" min="1" required>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="single_input">
+                    <label for="totalPrice">Total Price:</label>
+                    <input type="text" id="totalPrice" name="total_Price">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="single_input">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="text" id="phoneNumber" name="phone_number" required>
+                </div>
+            </div>
+        </div>
+        
+        <h3>Payment Details</h3>
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="single_input">
+                    <label for="cardHolderName">Card Holder Name:</label>
+                    <input type="text" id="cardHolderName" name="card_holder_name" required>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="single_input">
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" id="cardNumber" name="card_number" required>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="single_input">
+                    <label for="expiryDate">Expiration Date:</label>
+                    <input type="text" id="expiryDate" name="expiry_date" placeholder="MM/YY" required>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="single_input">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+            </div>
+            <div class="col-lg-12"> 
+                <div class="submit_btn">
+                    <button class="boxed-btn4" type="submit"><a href="#">Book Now</a></button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
                     <script>
                         document.addEventListener("DOMContentLoaded", function() {
                             var basePrice = 8000; // Base price per traveler

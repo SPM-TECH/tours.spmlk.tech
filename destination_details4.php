@@ -2,6 +2,32 @@
 session_start();
 
 include("db.php");
+
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+    $check = $_POST['checkin'];
+    $Travellers = $_POST['travellers'];
+    $totalPrice = $_POST['total_Price'];
+    $phonenumber = $_POST['phone_number'];
+    $cardholdername = $_POST['card_holder_name'];
+    $cardnumber = $_POST['card_number'];
+    $expirydate = $_POST['expiry_date'];
+    $cvv = $_POST['cvv']; 
+
+if(!empty($check) && !empty($Travellers) && !is_numeric($check) ){
+    $query="insert into booking (checkin,travellers,total_Price,phone_number,card_holder_name,card_number,expiry_date,cvv) 
+    values ('$check','$Travellers','$totalPrice','$phonenumber','$cardholdername','$cardnumber','$expirydate','$cvv')";
+
+    mysqli_query($conn, $query);
+
+    echo "<script type='text/javascript'> alert('Booking Successfull')</script>";
+}
+else 
+{
+    echo "<script type='text/javascript'> alert('Please Enter Valid Information`')</script>";
+}
+
+}
+
 ?>
 
 <!doctype html>
@@ -63,8 +89,7 @@ include("db.php");
                                             <li><a class="active" href="index.html">home</a></li>
                                             <li><a href="about.html">About</a></li>
                                             <li><a href="elements.html">Tourism News</a></li>
-                                            <!-- <li><a href="login.html">Login</a></li>
-                                            <li><a href="register.html">Register</a></li> -->
+                                        
                                             <!-- <li><a class="" href="travel_destination.html">Destination</a></l/li> -->
                                             <!-- <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
@@ -117,10 +142,10 @@ include("db.php");
         </div>
     </header>
     <!-- header-end -->
-    <div class="destination_banner_wrap3 overlay">
+    <div class="destination_banner_wrap4 overlay">
         <div class="destination_text text-center">
-            <h3>Coconut Artistry</h3>
-            <p>Transform Shells, Create Memories and Craft your unique treasures guided by skilled hands</p>
+            <h3>Toddy Bliss</h3>
+            <p>Harvest the essence of nature, tap into tradition, and indulge in a flavorful journey of toddy tapping, crafting, and spicy fish fry delights. </p>
         </div>
     </div>
 
@@ -130,8 +155,8 @@ include("db.php");
                 <div class="col-lg-8 col-md-9">
                     <div class="destination_info">
                         <h3>Description</h3>
-                        <p>Discover the allure of coconut shell crafts beyond mere artifacts – immerse yourself in the hands-on crafting experience. Engage with a skilled crafter who guides you through the art of customization, transforming coconut shells into unique creations.</p>
-                        <p> Your crafting journey begins with a warm welcome, served black tea in a coconut shell cup. As your creativity flows, take a delightful lunch break with homemade rotty and coconut sambol, adding a flavorful touch to your crafting adventure.</p>
+                        <p>Embark on a tantalizing journey with our Toddy Feast, where nature's nectar is not just a drink but a spectacle. Witness the art of tapping toddy from coconut trees, observe the meticulous preparation process, and learn to craft your own coconut leaf container.</p>
+                        <p> Immerse yourself in the essence of tradition as you savor a spicy fish fry paired perfectly with the freshly collected toddy. Join us for an unforgettable experience that combines the thrill of toddy harvesting, the joy of craftsmanship, and the delight of a flavorful feast.</p>
                         <!-- <div class="single_destination">
                             <h4>Day-01</h4>
                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
@@ -144,27 +169,26 @@ include("db.php");
                             <h4>Day-03</h4>
                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
                         </div> -->
-   <!-- Package Details Section -->
+<!-- Package Details Section -->
                
-   <div class="bordered_1px"></div>
-   <div class="destination_details">
-       <h3>Package Includes:</h3>
-       <button disabled>Crafting training and certificate</button>
-       <button disabled>Black tea in coconut shell</button>
-       <button disabled>Lunch</button>
-       <button disabled>Free paints and varnish</button>
-   </div> 
-   
-   <div class="bordered_1px"></div>
+<div class="bordered_1px"></div>
+<div class="destination_details">
+    <h3>Package Includes:</h3>
+    <button disabled>Coconut tree climbing</button>
+    <button disabled>Two cups of Toddy</button>
+    <button disabled>Spicy fish fry dish</button>
+</div> 
+
+<div class="bordered_1px"></div>
 <div class="destination_details">
     <h3>Price details:</h3>
-    <button disabled> LKR 7000</button>
+    <button disabled> LKR 5000</button>
 </div>
                     </div>
                     <div class="bordered_1px"></div>
                     <div class="contact_join">
                         <h3>Booking Details</h3>
-                        <form action="#">
+                        <form action="#" method="POST">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single_input">
@@ -178,43 +202,38 @@ include("db.php");
                                         <input type="number" id="travellers" name="travellers" min="1" required>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                               <div class="col-lg-6 col-md-6">
-                                <div class="single_input">
-                                    <label for="totalPrice">Total Price:</label>
-                                    <input type="text" id="totalPrice" name="totalPrice">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="single_input">
+                                        <label for="totalPrice">Total Price:</label>
+                                        <input type="text" id="totalPrice" name="total_Price">
+                                    </div>
                                 </div>
-                            </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single_input">
                                         <label for="phoneNumber">Phone Number:</label>
-                                        <input type="text" id="phoneNumber" name="phoneNumber" required>
+                                        <input type="text" id="phoneNumber" name="phone_number" required>
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                        <h3>Payment Details</h3>
-                        <form action="#">
+                            
+                            <h3>Payment Details</h3>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single_input">
                                         <label for="cardHolderName">Card Holder Name:</label>
-                                        <input type="text" id="cardHolderName" name="cardHolderName" required>
+                                        <input type="text" id="cardHolderName" name="card_holder_name" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single_input">
                                         <label for="cardNumber">Card Number:</label>
-                                        <input type="text" id="cardNumber" name="cardNumber" required>
+                                        <input type="text" id="cardNumber" name="card_number" required>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single_input">
                                         <label for="expiryDate">Expiration Date:</label>
-                                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                                        <input type="text" id="expiryDate" name="expiry_date" placeholder="MM/YY" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
@@ -393,8 +412,8 @@ include("db.php");
                                 </a>
                             </div>
                             <p>No: 57 Lloyd's Ave,<br>
-                                Batticaloa 30000,<br>
-                                Sri Lanka. <br>
+                               Batticaloa 30000,<br>
+                               Sri Lanka. <br>
                                 <a href="#">+(94)76 664 6404</a> <br>
                                 <a href="#">contact@carpenter.com</a>
                             </p>
@@ -436,8 +455,8 @@ include("db.php");
                                 Company
                             </h3>
                             <ul class="links">
-                                <li><a href="#">Pricing</a></li>
                                 <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
                                 <li><a href="#"> Gallery</a></li>
                                 <li><a href="contact.html"> Contact</a></li>
                             </ul>
@@ -521,7 +540,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
       <div class="modal-content">
         <div class="serch_form">
             <input type="text" placeholder="Search" >
-            <button type="submit">search</button>
+            <button type="submit">search</button>  
         </div>
       </div>
     </div>
@@ -553,7 +572,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/gijgo.min.js"></script>
     <script src="js/slick.min.js"></script>
    
-
     
     <!--contact js-->
     <script src="js/contact.js"></script>

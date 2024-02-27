@@ -2,15 +2,40 @@
 session_start();
 
 include("db.php");
-?>
 
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+    $check = $_POST['checkin'];
+    $Travellers = $_POST['travellers'];
+    $totalPrice = $_POST['total_Price'];
+    $phonenumber = $_POST['phone_number'];
+    $cardholdername = $_POST['card_holder_name'];
+    $cardnumber = $_POST['card_number'];
+    $expirydate = $_POST['expiry_date'];
+    $cvv = $_POST['cvv']; 
+
+if(!empty($check) && !empty($Travellers) && !is_numeric($check) ){
+    $query="insert into booking (checkin,travellers,total_Price,phone_number,card_holder_name,card_number,expiry_date,cvv) 
+    values ('$check','$Travellers','$totalPrice','$phonenumber','$cardholdername','$cardnumber','$expirydate','$cvv')";
+
+    mysqli_query($conn, $query);
+
+    echo "<script type='text/javascript'> alert('Booking Successfull')</script>";
+}
+else 
+{
+    echo "<script type='text/javascript'> alert('Please Enter Valid Information`')</script>";
+}
+
+}
+
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>spm-tour</title>
+    <title>spm-tours</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="destination_details.css">
@@ -63,7 +88,6 @@ include("db.php");
                                             <li><a class="active" href="index.html">home</a></li>
                                             <li><a href="about.html">About</a></li>
                                             <li><a href="elements.html">Tourism News</a></li>
-                                        
                                             <!-- <li><a class="" href="travel_destination.html">Destination</a></l/li> -->
                                             <!-- <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
@@ -85,8 +109,7 @@ include("db.php");
                             <div class="col-xl-4 col-lg-4 d-none d-lg-block">
                                 <div class="social_wrap d-flex align-items-center justify-content-end">
                                     <div class="number">
-                                        <p> <i class="fa fa-phone"></i> +(94)76 664 6404
-                                        </p>
+                                        <p> <i class="fa fa-phone"></i> +(94)76 664 6404                                        </p>
                                     </div>
                                     <div class="social_links d-none d-xl-block">
                                         <!-- <ul>
@@ -116,10 +139,10 @@ include("db.php");
         </div>
     </header>
     <!-- header-end -->
-    <div class="destination_banner_wrap4 overlay">
+    <div class="destination_banner_wrap2 overlay">
         <div class="destination_text text-center">
-            <h3>Toddy Bliss</h3>
-            <p>Harvest the essence of nature, tap into tradition, and indulge in a flavorful journey of toddy tapping, crafting, and spicy fish fry delights. </p>
+            <h3>Vaadi Culinary</h3>
+            <p>Pedal through vibrant paddy fields, craft local delicacies, take a dam bath, and dine under mango trees.</p>
         </div>
     </div>
 
@@ -129,8 +152,9 @@ include("db.php");
                 <div class="col-lg-8 col-md-9">
                     <div class="destination_info">
                         <h3>Description</h3>
-                        <p>Embark on a tantalizing journey with our Toddy Feast, where nature's nectar is not just a drink but a spectacle. Witness the art of tapping toddy from coconut trees, observe the meticulous preparation process, and learn to craft your own coconut leaf container.</p>
-                        <p> Immerse yourself in the essence of tradition as you savor a spicy fish fry paired perfectly with the freshly collected toddy. Join us for an unforgettable experience that combines the thrill of toddy harvesting, the joy of craftsmanship, and the delight of a flavorful feast.</p>
+                        <p>Immerse yourself in a day of authentic cultural bliss at Vaadi House in Batticaloa. Pedal through lush paddy fields on a Lumala bicycle to reach the traditional abode. Join an old farmer in crafting the delectable Naattu Chicken Curry and Unnichchai Pond Fish Milk Curry.</p>
+                        <p>After the culinary adventure, indulge in a refreshing dam bath, followed by a feast served on a banana leaf atop a palmyra mat. Complete your experience with a siesta under the shade of a mango tree. This unique day, adorned with culinary delights and countryside charm, awaits you exclusively during the summer season.
+                        </p>
                         <!-- <div class="single_destination">
                             <h4>Day-01</h4>
                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
@@ -143,26 +167,29 @@ include("db.php");
                             <h4>Day-03</h4>
                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
                         </div> -->
-<!-- Package Details Section -->
+  <!-- Package Details Section -->
                
-<div class="bordered_1px"></div>
-<div class="destination_details">
-    <h3>Package Includes:</h3>
-    <button disabled>Coconut tree climbing</button>
-    <button disabled>Two cups of Toddy</button>
-    <button disabled>Spicy fish fry dish</button>
-</div> 
-
-<div class="bordered_1px"></div>
+  <div class="bordered_1px"></div>
+  <div class="destination_details">
+      <h3>Package Includes:</h3>
+      <button disabled>Bicycle ride</button>
+      <button disabled>Dam Bath</button>
+      <button disabled>Delicious Nattu Chicken Curry</button>
+      <button disabled>Unnichai Pond Fish Milk Curry with rice</button>
+      <button disabled>Cooking Experience</button>
+      <button disabled>Free towels and sarong</button>
+  </div>  
+  
+  <div class="bordered_1px"></div>
 <div class="destination_details">
     <h3>Price details:</h3>
-    <button disabled> LKR 5000</button>
+    <button disabled> LKR 6000</button>
 </div>
                     </div>
                     <div class="bordered_1px"></div>
                     <div class="contact_join">
                         <h3>Booking Details</h3>
-                        <form action="#">
+                        <form action="#" method="POST">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single_input">
@@ -176,43 +203,38 @@ include("db.php");
                                         <input type="number" id="travellers" name="travellers" min="1" required>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                               <div class="col-lg-6 col-md-6">
-                                <div class="single_input">
-                                    <label for="totalPrice">Total Price:</label>
-                                    <input type="text" id="totalPrice" name="totalPrice">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="single_input">
+                                        <label for="totalPrice">Total Price:</label>
+                                        <input type="text" id="totalPrice" name="total_Price">
+                                    </div>
                                 </div>
-                            </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single_input">
                                         <label for="phoneNumber">Phone Number:</label>
-                                        <input type="text" id="phoneNumber" name="phoneNumber" required>
+                                        <input type="text" id="phoneNumber" name="phone_number" required>
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                        <h3>Payment Details</h3>
-                        <form action="#">
+                            
+                            <h3>Payment Details</h3>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single_input">
                                         <label for="cardHolderName">Card Holder Name:</label>
-                                        <input type="text" id="cardHolderName" name="cardHolderName" required>
+                                        <input type="text" id="cardHolderName" name="card_holder_name" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single_input">
                                         <label for="cardNumber">Card Number:</label>
-                                        <input type="text" id="cardNumber" name="cardNumber" required>
+                                        <input type="text" id="cardNumber" name="card_number" required>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single_input">
                                         <label for="expiryDate">Expiration Date:</label>
-                                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                                        <input type="text" id="expiryDate" name="expiry_date" placeholder="MM/YY" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
@@ -391,8 +413,8 @@ include("db.php");
                                 </a>
                             </div>
                             <p>No: 57 Lloyd's Ave,<br>
-                               Batticaloa 30000,<br>
-                               Sri Lanka. <br>
+                                Batticaloa 30000,<br>
+                                Sri Lanka. <br>
                                 <a href="#">+(94)76 664 6404</a> <br>
                                 <a href="#">contact@carpenter.com</a>
                             </p>
@@ -519,7 +541,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
       <div class="modal-content">
         <div class="serch_form">
             <input type="text" placeholder="Search" >
-            <button type="submit">search</button>  
+            <button type="submit">search</button>
         </div>
       </div>
     </div>
@@ -551,6 +573,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/gijgo.min.js"></script>
     <script src="js/slick.min.js"></script>
    
+
     
     <!--contact js-->
     <script src="js/contact.js"></script>
