@@ -2,7 +2,35 @@
 session_start();
 
 include("db.php");
+
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+    $Message = $_POST['message'];
+    $Name = $_POST['name'];
+    $Email = $_POST['email'];
+    $subject = $_POST['subject'];
+
+    // Check if fields are not empty and email is valid
+    if(!empty($Message) && !empty($Name) && !empty($Email) && filter_var($Email, FILTER_VALIDATE_EMAIL)){
+        // Prepare and bind the statement to prevent SQL injection
+        $stmt = $conn->prepare("INSERT INTO contact (message, name, email, subject) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $Message, $Name, $Email, $subject);
+
+        // Execute the statement
+        if($stmt->execute()){
+            echo "<script type='text/javascript'> alert('We will get back to you soon')</script>";
+        } else {
+            echo "<script type='text/javascript'> alert('Error occurred while saving data')</script>";
+        }
+
+        // Close statement and connection
+        $stmt->close();
+        $conn->close();
+    } else {
+        echo "<script type='text/javascript'> alert('Please enter valid information')</script>";
+    }
+}
 ?>
+
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -73,7 +101,7 @@ include("db.php");
                                                     <li><a href="single-blog.html">single-blog</a></li>
                                                 </ul>
                                             </li> -->
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="contact.php">Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -179,7 +207,7 @@ include("db.php");
                         <h2 class="contact-title">Get in Touch</h2>
                     </div>
                     <div class="col-lg-8">
-                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form  action="#" method="POST" >
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
@@ -203,7 +231,7 @@ include("db.php");
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                                <button type="submit" class="button button-contactForm boxed-btn"><a href="#">Send</a></button>
                             </div>
                         </form>
                     </div>
