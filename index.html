@@ -202,18 +202,18 @@ include("db.php");
                 </div>
                 <div class="col-lg-9">
                     <div class="search_wrap">
-                        <form class="search_form" action="#">
+                        <form class="search_form" action="search.php" method="POST">
                             <div class="input_field">
-                                <input type="text" placeholder="Where to go?">
+                                <input type="text" id="destination" name="where_to_go" placeholder="Where to go?">
                             </div>
                             <div class="input_field">
-                                <input id="datepicker" placeholder="Date">
+                                <input id="datepicker" name="date" placeholder="Date">
                             </div>
                             <div class="input_field">
-                                <select>
-                                    <option data-display="Travel type">Travel type</option>
-                                    <option value="1">Some option</option>
-                                    <option value="2">Another option</option>
+                                <select id="travel_type" name="travel_type">
+                                    <option data-display="Travel type">Adventure</option>
+                                    <option value="1">Cultural</option>
+                                    <option value="2">Exploring Experience</option>
                                 </select>
                             </div>
                             <div class="search_btn">
@@ -247,7 +247,7 @@ include("db.php");
                             <img src="img/destination/1.png" alt="">
                         </div>
                         <div class="content">
-                            <p class="d-flex align-items-center"> Lagoon Sail <a href="destination_details.php"> view</a>
+                            <p class="d-flex align-items-center"> Lagoon Sail <a href="login.php?destination=1"> view</a>
                             </p>
 
                         </div>
@@ -260,7 +260,7 @@ include("db.php");
                             <img src="img/destination/2.png" alt="">
                         </div>
                         <div class="content">
-                            <p class="d-flex align-items-center">Vaadi Culinary <a href="destination_details2.php"> view</a>
+                            <p class="d-flex align-items-center">Vaadi Culinary <a href="login.php?destination=2"> view</a>
                             </p>
 
                         </div>
@@ -272,7 +272,7 @@ include("db.php");
                             <img src="img/destination/3.png" alt="">
                         </div>
                         <div class="content">
-                            <p class="d-flex align-items-center">Coconut Artistry <a href="destination_details3.php"> view</a> </p>
+                            <p class="d-flex align-items-center">Coconut Artistry <a href="login.php?destination=3"> view</a> </p>
 
                         </div>
                     </div>
@@ -283,7 +283,7 @@ include("db.php");
                             <img src="img/destination/4.png" alt="">
                         </div>
                         <div class="content">
-                            <p class="d-flex align-items-center">Toddy Bliss <a href="destination_details4.php">view</a>
+                            <p class="d-flex align-items-center">Toddy Bliss <a href="login.php?destination=4">view</a>
                             </p>
 
                         </div>
