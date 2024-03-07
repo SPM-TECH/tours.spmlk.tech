@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     /* background: linear-gradient(to right, #00b4db, #0083b0); */
-    background-image: url(../img/banner/login_place.png);
+    background-image: url("img/banner/login_place.png");
     background-size: cover; 
     display: flex;
     justify-content: center;

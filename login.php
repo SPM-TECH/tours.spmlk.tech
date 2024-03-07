@@ -61,7 +61,7 @@ if (isset($_GET['destination'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>spm-tours</title>
-    <link rel="stylesheet" href="login.css">
+    <link type="text/css" rel="stylesheet" href="login.css">
 </head>
 <body>
 

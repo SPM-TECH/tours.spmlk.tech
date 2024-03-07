@@ -36,7 +36,7 @@ else
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>spm-tours</title>
-    <link rel="stylesheet" href="register-login.css">
+    <link type="text/css" rel="stylesheet" href="register-login.css">
 </head>
 <body>
     <div class="container">
