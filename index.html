@@ -202,30 +202,84 @@ include("db.php");
                 </div>
                 <div class="col-lg-9">
                     <div class="search_wrap">
-                        <form class="search_form" action="search.php" method="POST">
-                            <div class="input_field">
-                                <input type="text" id="destination" name="where_to_go" placeholder="Where to go?">
-                            </div>
-                            <div class="input_field">
-                                <input id="datepicker" name="date" placeholder="Date">
-                            </div>
-                            <div class="input_field">
-                                <select id="travel_type" name="travel_type">
-                                    <option data-display="Travel type">Adventure</option>
-                                    <option value="1">Cultural</option>
-                                    <option value="2">Exploring Experience</option>
-                                </select>
-                            </div>
-                            <div class="search_btn">
-                                <button class="boxed-btn4 " type="submit">Search</button>
-                            </div>
-                        </form>
+                        <div class="search_form">
+                            <!-- <form class="search_form" action="search.php" method="POST"> -->
+                                <div class="input_field">
+                                    <!-- <input type="text" id="destination" name="where_to_go" placeholder="Where to go?"> -->
+                                    <input type="text" id="searchInput2" name="where_to_go" placeholder="Where to go?">
+                                </div>
+                                <div class="input_field">
+                                    <input id="datepicker" name="date" placeholder="Date">
+                                </div>
+                                <div class="input_field">
+                                    <select id="travel_type" name="travel_type">
+                                        <option data-display="Travel type">Adventure</option>
+                                        <option value="1">Cultural</option>
+                                        <option value="2">Exploring Experience</option>
+                                    </select>
+                                </div>
+                                <div class="search_btn">
+                                    <!-- <button class="boxed-btn4" type="submit">Search</button> -->
+                                    <button class="boxed-btn4" type="submit" onclick="search('searchInput2')">Search</button>
+                                </div>
+                            <!-- </form> -->
+
+                        </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- where_togo_area_end  -->
+
+    <!-- search_result_area_start -->
+    <div class="popular_destination_area" >
+        <div class="container">
+            <div class="row" id="searchResult">
+            </div>
+        </div>
+    </div>
+    <!-- search_result_area_end     -->
+
+    <!-- search_function_start -->
+    <script>
+        function search(searchInput){
+            
+            var search=document.getElementById(searchInput).value.toLowerCase();
+            console.log(search);
+            // get all earchabe content
+            // var elements = document.querySelectorAll('.searchable');
+            var e = document.querySelectorAll('.searchable');
+            var elements = [];
+            e.forEach(
+                function(ele){
+                    let element=ele.cloneNode(true);
+                    elements.push(element);
+                }
+            );
+            console.log(elements);
+            elements.forEach(element => {
+                element.classList.remove('searchable');
+            });
+            var result=document.getElementById('searchResult');
+            // reset previous search result
+            result.innerHTML='';
+            elements.forEach(
+                function(e){
+                    var content=e.textContent.toLowerCase();
+                    if(content.includes(search)){
+                        console.log('yes');
+                        result.appendChild(e.cloneNode(true));
+                    }
+                }
+            );
+            
+
+        }
+
+    </script>
+    <!-- search_function_end -->
 
     <!-- popular_destination_area_start  -->
     <div class="popular_destination_area" id="popular_destinations">
@@ -240,7 +294,7 @@ include("db.php");
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 searchable">
                     <div class="single_place">
                     <div class="single_destination">
                         <div class="thumb">
@@ -254,7 +308,7 @@ include("db.php");
                     </div>
                 </div>
             </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 searchable">
                     <div class="single_destination">
                         <div class="thumb">
                             <img src="img/destination/2.png" alt="">
@@ -266,7 +320,7 @@ include("db.php");
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 searchable">
                     <div class="single_destination">
                         <div class="thumb">
                             <img src="img/destination/3.png" alt="">
@@ -277,7 +331,7 @@ include("db.php");
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 searchable">
                     <div class="single_destination">
                         <div class="thumb">
                             <img src="img/destination/4.png" alt="">
@@ -870,8 +924,9 @@ include("db.php");
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="serch_form">
-                    <input type="text" placeholder="Search">
-                    <button type="submit">search</button>
+                    <input type="text" placeholder="Search" id="searchInput1">
+                    <!-- <button type="submit" id="searchInput">search</button> -->
+                    <button type="submit"  onclick="search('searchInput1')" data-dismiss="modal">search</button>
                 </div>
             </div>
         </div>
