@@ -113,14 +113,14 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                                         </p>
                                     </div>
                                     <div class="social_links d-none d-xl-block">
-                                        <!-- <ul>
-                                            <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
-                                            <li><a href="#"> <i class="fa fa-linkedin"></i> </a></li>
-                                            <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
-                                            <li><a href="#"> <i class="fa fa-google-plus"></i> </a></li>
-                                        </ul> -->
-                                        <b><li><a href="login.php">Login</a></li></b>
-                                        <b><li><a href="register.php">Register</a></li></b>
+                                        <ul>
+                                        <li><a href="https://www.instagram.com/spmlk.tech/"> <i class="fa fa-instagram"></i> </a></li>
+                                            <li><a href="https://lk.linkedin.com/company/spmlk-tech"> <i class="fa fa-linkedin"></i> </a></li>
+                                            <li><a href="https://www.facebook.com/spmlk.tech/"> <i class="fa fa-facebook"></i> </a></li>
+                                            <!-- <li><a href="#"> <i class="fa fa-google-plus"></i> </a></li> -->
+                                        </ul>
+                                        <!-- <b><li><a href="login.php">Login</a></li></b>
+                                        <b><li><a href="register.php">Register</a></li></b> -->
                                     </div>
                                 </div>
                             </div>
@@ -255,7 +255,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-email"></i></span>
                             <div class="media-body">
-                                <h3>support@colorlib.com</h3>
+                                <h3>info@spmlk.tech</h3>
                                 <p>Send us your query anytime!</p>
                             </div>
                         </div>
@@ -281,32 +281,27 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                                 Batticaloa 30000,<br>
                                 Sri Lanka. <br>
                                 <a href="#">+(94)76 664 6404</a> <br>
-                                <a href="#">contact@carpenter.com</a>
+                                <a href="#">info@spmlk.tech</a>
                             </p>
                             <div class="socail_links">
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://www.facebook.com/spmlk.tech/">
                                             <i class="ti-facebook"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://twitter.com/spm_tech">
                                             <i class="ti-twitter-alt"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://www.instagram.com/spmlk.tech/">
                                             <i class="fa fa-instagram"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
-                                            <i class="fa fa-pinterest"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
+                                        <a href="https://www.youtube.com/channel/UCKbvgaE_s5wPsAEgoFcaykg">
                                             <i class="fa fa-youtube-play"></i>
                                         </a>
                                     </li>
@@ -323,7 +318,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                             <ul class="links">
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="about.html">About</a></li>
-                                <li><a href="#"> Gallery</a></li>
+                                <li><a href="elements.html">Tourism News</a></li>
                                 <li><a href="contact.html"> Contact</a></li>
                             </ul>
                         </div>

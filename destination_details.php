@@ -117,14 +117,14 @@ else
                                         </p>
                                     </div>
                                     <div class="social_links d-none d-xl-block">
-                                        <!-- <ul>
-                                            <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
-                                            <li><a href="#"> <i class="fa fa-linkedin"></i> </a></li>
-                                            <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
-                                            <li><a href="#"> <i class="fa fa-google-plus"></i> </a></li>
-                                        </ul> -->
-                                        <b><li><a href="login.php">Login</a></li></b>
-                                        <b><li><a href="register.php">Register</a></li></b>
+                                        <ul>
+                                        <li><a href="https://www.instagram.com/spmlk.tech/"> <i class="fa fa-instagram"></i> </a></li>
+                                            <li><a href="https://lk.linkedin.com/company/spmlk-tech"> <i class="fa fa-linkedin"></i> </a></li>
+                                            <li><a href="https://www.facebook.com/spmlk.tech/"> <i class="fa fa-facebook"></i> </a></li>
+                                            <!-- <li><a href="#"> <i class="fa fa-google-plus"></i> </a></li> -->
+                                        </ul>
+                                        <!-- <b><li><a href="login.php">Login</a></li></b>
+                                        <b><li><a href="register.php">Register</a></li></b> -->
                                     </div>
                                 </div>
                             </div>
@@ -369,7 +369,7 @@ else
     </div>
 
     <!-- newletter_area_start  -->
-    <div class="newletter_area overlay">
+    <!-- <div class="newletter_area overlay">
         <div class="container">
             <div class="row justify-content-center align-items-center">
                 <div class="col-lg-10">
@@ -402,9 +402,9 @@ else
             </div>
         </div>
     </div>
-    <!-- newletter_area_end  -->
+     newletter_area_end  -->
 
-    <div class="popular_places_area">
+    <!-- <div class="popular_places_area">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
@@ -494,7 +494,7 @@ else
                 </div>
             </div>
         </div>
-    </div>
+    </div> --> 
 
     <footer class="footer">
         <div class="footer_top">
@@ -511,32 +511,27 @@ else
                                 Batticaloa 30000,<br>
                                 Sri Lanka. <br>
                                 <a href="#">+(94)76 664 6404</a> <br>
-                                <a href="#">contact@carpenter.com</a>
+                                <a href="#">info@spmlk.tech</a>
                             </p>
                             <div class="socail_links">
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://www.facebook.com/spmlk.tech/">
                                             <i class="ti-facebook"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://twitter.com/spm_tech">
                                             <i class="ti-twitter-alt"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://www.instagram.com/spmlk.tech/">
                                             <i class="fa fa-instagram"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
-                                            <i class="fa fa-pinterest"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
+                                        <a href="https://www.youtube.com/channel/UCKbvgaE_s5wPsAEgoFcaykg">
                                             <i class="fa fa-youtube-play"></i>
                                         </a>
                                     </li>
@@ -553,7 +548,7 @@ else
                             <ul class="links">
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="about.html">About</a></li>
-                                <li><a href="#"> Gallery</a></li>
+                                <li><a href="elements.html">Tourism News</a></li>
                                 <li><a href="contact.html"> Contact</a></li>
                             </ul>
                         </div>

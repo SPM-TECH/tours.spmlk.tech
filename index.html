@@ -88,14 +88,14 @@ include("db.php");
                                         </p>
                                     </div>
                                     <div class="social_links d-none d-xl-block">
-                                        <!-- <ul>
-                                            <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
-                                            <li><a href="#"> <i class="fa fa-linkedin"></i> </a></li>
-                                            <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
-                                            <li><a href="#"> <i class="fa fa-google-plus"></i> </a></li>
-                                        </ul> -->
-                                        <b><li><a href="login.php">Login</a></li></b>
-                                        <b><li><a href="register.php">Register</a></li></b>
+                                        <ul>
+                                            <li><a href="https://www.instagram.com/spmlk.tech/"> <i class="fa fa-instagram"></i> </a></li>
+                                            <li><a href="https://lk.linkedin.com/company/spmlk-tech"> <i class="fa fa-linkedin"></i> </a></li>
+                                            <li><a href="https://www.facebook.com/spmlk.tech/"> <i class="fa fa-facebook"></i> </a></li>
+                                            <!-- <li><a href="#"> <i class="fa fa-google-plus"></i> </a></li> -->
+                                        </ul>
+                                        <!-- <b><li><a href="login.php">Login</a></li></b>
+                                        <b><li><a href="register.php">Register</a></li></b> -->
                                     </div>
                                 </div>
                             </div>
@@ -189,8 +189,6 @@ include("db.php");
     </div> 
     <!-- slider_area_end -->
 
-
-
      <!--where_togo_area_start  -->
     <div class="where_togo_area">
         <div class="container">
@@ -213,15 +211,17 @@ include("db.php");
                                 </div>
                                 <div class="input_field">
                                     <select id="travel_type" name="travel_type">
-                                        <option data-display="Travel type">Adventure</option>
-                                        <option value="1">Cultural</option>
-                                        <option value="2">Exploring Experience</option>
+                                        <option data-display="Travel type">Select</option>
+                                        <option value="1">Adventure</option>
+                                        <option value="2">Cultural</option>
+                                        <option value="3">Exploring Experience</option>
                                     </select>
+
                                 </div>
-                                <div class="search_btn">
-                                    <!-- <button class="boxed-btn4" type="submit">Search</button> -->
+                                 <div class="search_btn">
+                                    <!-- <button class="boxed-btn4" type="submit">Search</button>  -->
                                     <button class="boxed-btn4" type="submit" onclick="search('searchInput2')">Search</button>
-                                </div>
+                                 </div>  
                             <!-- </form> -->
 
                         </div>
@@ -231,55 +231,57 @@ include("db.php");
             </div>
         </div>
     </div>
-    <!-- where_togo_area_end  -->
+    <!-- where_togo_area_end  --> <br> <br> <br> <br> <br>
 
-    <!-- search_result_area_start -->
-    <div class="popular_destination_area" >
-        <div class="container">
-            <div class="row" id="searchResult">
-            </div>
+<!-- search_result_area_start -->
+<div class="popular_destination_area" style="margin-top: 30px;margin-bottom: 0px;display: none;visibility: hidden;" >
+    <div class="container">
+        <div class="row" id="searchResult">
         </div>
     </div>
-    <!-- search_result_area_end     -->
+</div>
+<!-- search_result_area_end     -->
 
-    <!-- search_function_start -->
-    <script>
-        function search(searchInput){
-            
-            var search=document.getElementById(searchInput).value.toLowerCase();
-            console.log(search);
-            // get all earchabe content
-            // var elements = document.querySelectorAll('.searchable');
-            var e = document.querySelectorAll('.searchable');
-            var elements = [];
-            e.forEach(
-                function(ele){
-                    let element=ele.cloneNode(true);
-                    elements.push(element);
-                }
-            );
-            console.log(elements);
-            elements.forEach(element => {
-                element.classList.remove('searchable');
-            });
-            var result=document.getElementById('searchResult');
-            // reset previous search result
-            result.innerHTML='';
-            elements.forEach(
-                function(e){
-                    var content=e.textContent.toLowerCase();
-                    if(content.includes(search)){
-                        console.log('yes');
-                        result.appendChild(e.cloneNode(true));
-                    }
-                }
-            );
-            
+<!-- search_function_start -->
+<script>
+function search(searchInput){
+    
+    var search = document.getElementById(searchInput).value.toLowerCase();
+    console.log(search);
+    // get all searchable content
+    var e = document.querySelectorAll('.searchable');
+    var elements = [];
+    e.forEach(function(ele){
+        let element = ele.cloneNode(true);
+        elements.push(element);
+    });
+    console.log(elements);
+    elements.forEach(element => {
+        element.classList.remove('searchable');
+    });
+    var result = document.getElementById('searchResult');
+    // reset previous search result
+    result.innerHTML = '';
+    elements.forEach(function(e){
+        var content = e.textContent.toLowerCase();
+            if(content.includes(search)){
+                console.log('yes');
+                result.appendChild(e.cloneNode(true));
+            }
+        });
 
+        // Show or hide popular_destination_area based on search results
+        var popularDestinationArea = document.querySelector('.popular_destination_area');
+        if (result.children.length > 0) {
+            popularDestinationArea.style.display = 'block';
+            popularDestinationArea.style.visibility = 'visible';
+        } else {
+            popularDestinationArea.style.display = 'none';
+            popularDestinationArea.style.visibility = 'hidden';
         }
-
-    </script>
-    <!-- search_function_end -->
+    }
+</script>
+<!-- search_function_end -->   
 
     <!-- popular_destination_area_start  -->
     <div class="popular_destination_area" id="popular_destinations">
@@ -370,7 +372,7 @@ include("db.php");
             </div>
         </div>
     </div>
-    <!-- popular_destination_area_end  -->
+    <!-- popular_destination_area_end  --> <br> <br> <br> <br> <br>
     <div class="video_area video_bg overlay">
         <div class="container">
             <div class="row">
@@ -378,7 +380,7 @@ include("db.php");
                     <div class="video_wrap text-center">
                         <h3>Enjoy Video</h3>
                         <div class="video_icon">
-                            <a class="popup-video video_play_button" href="https://www.youtube.com/watch?v=f59dDEk57i0">
+                            <a class="popup-video video_play_button" href="https://www.youtube.com/watch?v=KudVCACVseI">
                                 <i class="fa fa-play"></i>
                             </a>
                         </div>
@@ -389,7 +391,7 @@ include("db.php");
     </div>
 
     <!-- newletter_area_start  -->
-    <div class="newletter_area overlay">
+    <!-- <div class="newletter_area overlay">
         <div class="container">
             <div class="row justify-content-center align-items-center">
                 <div class="col-lg-10">
@@ -421,7 +423,7 @@ include("db.php");
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- newletter_area_end  -->
     
 
@@ -716,7 +718,7 @@ include("db.php");
     </div>
     <!-- /testimonial_area  -->
 
-
+<!-- 
     <div class="recent_trip_area">
         <div class="container">
             <div class="row justify-content-center">
@@ -777,7 +779,7 @@ include("db.php");
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 
@@ -796,32 +798,27 @@ include("db.php");
                                 Batticaloa 30000,<br>
                                 Sri Lanka. <br>
                                 <a href="#">+(94)76 664 6404</a> <br>
-                                <a href="#">contact@carpenter.com</a>
+                                <a href="#">info@spmlk.tech</a>
                             </p>
                             <div class="socail_links">
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://www.facebook.com/spmlk.tech/">
                                             <i class="ti-facebook"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://twitter.com/spm_tech">
                                             <i class="ti-twitter-alt"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://www.instagram.com/spmlk.tech/">
                                             <i class="fa fa-instagram"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
-                                            <i class="fa fa-pinterest"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
+                                        <a href="https://www.youtube.com/channel/UCKbvgaE_s5wPsAEgoFcaykg">
                                             <i class="fa fa-youtube-play"></i>
                                         </a>
                                     </li>
@@ -838,7 +835,7 @@ include("db.php");
                             <ul class="links">
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="about.html">About</a></li>
-                                <li><a href="#"> Gallery</a></li>
+                                <li><a href="elements.html"> Tourism News</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
