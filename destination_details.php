@@ -45,7 +45,7 @@ else
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/spm-fav.png">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -81,7 +81,7 @@ else
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
                                     <a href="index.html">
-                                        <img src="img/logo.png" alt="">
+                                        <img src="img/spm.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -504,7 +504,7 @@ else
                         <div class="footer_widget">
                             <div class="footer_logo">
                                 <a href="#">
-                                    <img src="img/footer_logo.png" alt="">
+                                    <img src="img/spm-w.png" alt="">
                                 </a>
                             </div>
                             <p>No: 57 Lloyd's Ave,<br>
