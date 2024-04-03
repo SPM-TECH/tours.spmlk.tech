@@ -1308,7 +1308,17 @@ h3 {
 
 /* line 7, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_slider.scss */
 .slider_bg_3 {
-  background-image: url(../img/banner/banner3.png);
+  background-image: url(../img/spm-tours/spm-tours-4.jpg);
+}
+
+/* line 10, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_slider.scss */
+.slider_bg_4 {
+  background-image: url(../img/spm-tours/spm-tours-5.jpg);
+}
+
+/* line 10, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_slider.scss */
+.slider_bg_5 {
+  background-image: url(../img/spm-tours/spm-tours-6.jpg);
 }
 
 /* line 10, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_slider.scss */
@@ -3414,6 +3424,11 @@ h3 {
 /* line 1, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_video.scss */
 .video_bg {
   background-image: url(../img/spm-tours/spm-tours-3.jpg);
+}
+
+/* line 4, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_video.scss */
+.video_bg1 {
+  background-image: url(../img/spm-tours/spm-tours-about-x.jpg);
 }
 
 /* line 4, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_video.scss */
