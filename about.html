@@ -4,199 +4,254 @@ session_start();
 include("db.php");
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="zxx">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>spm-tours</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/spm-fav.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/spm-fav.png" />
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/gijgo.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slicknav.css">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/nice-select.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/gijgo.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slicknav.css" />
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"
+    />
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-</head>
+  </head>
 
-<body>
+  <body>
     <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
 
     <!-- header-start -->
     <header>
-        <div class="header-area ">
-            <div id="sticky-header" class="main-header-area">
-                <div class="container-fluid">
-                    <div class="header_bottom_border">
-                        <div class="row align-items-center">
-                            <div class="col-xl-2 col-lg-2">
-                                <div class="logo">
-                                    <a href="index.html">
-                                        <img src="img/spm.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6">
-                                <div class="main-menu  d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><a class="active" href="index.html">home</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="elements.html">Tourism News</a></li>
-                                            <!-- <li><a href="login.html">Login</a></li>
+      <div class="header-area">
+        <div id="sticky-header" class="main-header-area">
+          <div class="container-fluid">
+            <div class="header_bottom_border">
+              <div class="row align-items-center">
+                <div class="col-xl-2 col-lg-2">
+                  <div class="logo">
+                    <a href="index.html">
+                      <img src="img/spm.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                  <div class="main-menu d-none d-lg-block">
+                    <nav>
+                      <ul id="navigation">
+                        <li><a class="active" href="index.html">home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="elements.html">Tourism News</a></li>
+                        <!-- <li><a href="login.html">Login</a></li>
                                             <li><a href="register.html">Register</a></li> -->
-                                            <!-- <li><a class="" href="travel_destination.html">Destination</a></l/li> -->
-                                            <!-- <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                        <!-- <li><a class="" href="travel_destination.html">Destination</a></l/li> -->
+                        <!-- <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
                                                         <li><a href="destination_details.html">Destinations details</a></li>
                                                         <li><a href="elements.html">elements</a></li>
                                                 </ul>
                                             </li> -->
-                                            <!-- <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                        <!-- <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
                                                     <li><a href="blog.html">blog</a></li>
                                                     <li><a href="single-blog.html">single-blog</a></li>
                                                 </ul>
                                             </li> -->
-                                            <!-- <li><a href="contact.php">Contact</a></li> -->
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 d-none d-lg-block">
-                                <div class="social_wrap d-flex align-items-center justify-content-end">
-                                    <div class="number">
-                                        <p> <i class="fa fa-phone"></i> +(94)76 664 6404
-                                        </p>
-                                    </div>
-                                    <div class="social_links d-none d-xl-block">
-                                        <ul>
-                                            <li><a href="https://www.instagram.com/spmlk.tech/"> <i class="fa fa-instagram"></i> </a></li>
-                                            <li><a href="https://lk.linkedin.com/company/spmlk-tech"> <i class="fa fa-linkedin"></i> </a></li>
-                                            <li><a href="https://www.facebook.com/spmlk.tech/"> <i class="fa fa-facebook"></i> </a></li>
-                                            <!-- <li><a href="#"> <i class="fa fa-google-plus"></i> </a></li> -->
-                                        </ul>
-                                        <!-- <b><li><a href="login.php">Login</a></li></b>
-                                        <b><li><a href="register.php">Register</a></li></b> -->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="seach_icon">
-                                <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </div>
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
-                        </div>
-                    </div>
-
+                        <!-- <li><a href="contact.php">Contact</a></li> -->
+                      </ul>
+                    </nav>
+                  </div>
                 </div>
+                <div class="col-xl-4 col-lg-4 d-none d-lg-block">
+                  <div
+                    class="social_wrap d-flex align-items-center justify-content-end"
+                  >
+                    <div class="number">
+                      <p><i class="fa fa-phone"></i> +(94)76 664 6404</p>
+                    </div>
+                    <div class="social_links d-none d-xl-block">
+                      <ul>
+                        <li>
+                          <a href="https://www.instagram.com/spmlk.tech/">
+                            <i class="fa fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://lk.linkedin.com/company/spmlk-tech">
+                            <i class="fa fa-linkedin"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.facebook.com/spmlk.tech/">
+                            <i class="fa fa-facebook"></i>
+                          </a>
+                        </li>
+                        <!-- <li><a href="#"> <i class="fa fa-google-plus"></i> </a></li> -->
+                      </ul>
+                      <!-- <b><li><a href="login.php">Login</a></li></b>
+                                        <b><li><a href="register.php">Register</a></li></b> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="seach_icon">
+                  <a
+                    data-toggle="modal"
+                    data-target="#exampleModalCenter"
+                    href="#"
+                  >
+                    <i class="fa fa-search"></i>
+                  </a>
+                </div>
+                <div class="col-12">
+                  <div class="mobile_menu d-block d-lg-none"></div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </header>
     <!-- header-end -->
 
     <!-- bradcam_area  -->
     <div class="bradcam_area bradcam_bg_3">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="bradcam_text text-center">
-                        <h3>About Us</h3>
-                        <p>Explore the pristine beauty of Batticaloa with our eco tours</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="bradcam_text text-center">
+              <h3>About Us</h3>
+              <p>
+                Explore the pristine beauty of Batticaloa with our eco tours
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <!--/ bradcam_area  -->
-    
+
     <div class="about_story">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="story_heading">
-                        <h3>Our Story</h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-11 offset-lg-1">
-                            <div class="story_info">
-                                <div class="row">
-                                    <div class="col-lg-9">
-                                        <p>Join us on an unforgettable journey with Eco-Tours, a unique way to explore the rich tapestry of Batticaloa's local communities. Rather than just sightseeing, Eco-Tours offers the opportunity to fully immerse yourself in the vibrant heart of Batticaloa. We aim to redefine the way we travel by seamlessly integrating visitors with the local way of life. Imagine yourself not just as a tourist, but as a temporary local, forging lasting connections with the people and traditions of this enchanting destination.</p>
-                                <p>At the heart of Eco-Tours is a commitment to creating meaningful interactions between visitors and the diverse communities of Batticaloa. Our platform acts as a bridge, promoting a deep understanding of different lifestyles, encouraging eco-friendly practices, and advocating responsible tourism. We passionately believe in the preservation of Batticaloa's natural and cultural heritage, and we strive to ensure that our tours have a positive impact on both our guests and the local communities they encounter., ensuring that every traveler contributes positively to the destinations they explore. Moreover, by empowering local communities through tourism-related activities, Eco-Tours creates economic opportunities that not only sustain the region but also enrich the lives of those who call Batticaloa home. Join us on a journey where the threads of travel weave a tapestry of shared experiences, fostering connection, appreciation, and a legacy of responsible exploration.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="story_thumb">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-6">
-                                        <div class="thumb padd_1">
-                                            <img src="img/spm-tours/spm-tours-about-1.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="thumb">
-                                            <img src="img/spm-tours/spm-tours-about-2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="counter_wrap">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4">
-                                        <div class="single_counter text-center">
-                                            <h3  class="counter">378</h3>
-                                            <p>Tour has done successfully</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4">
-                                        <div class="single_counter text-center">
-                                            <h3 class="counter">30</h3>
-                                            <p>Yearly tour arrange</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4">
-                                        <div class="single_counter text-center">
-                                            <h3 class="counter">2263</h3>
-                                            <p>Happy Clients</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="story_heading">
+              <h3>Our Story</h3>
             </div>
+            <div class="row">
+              <div class="col-lg-11 offset-lg-1">
+                <div class="story_info">
+                  <div class="row">
+                    <div class="col-lg-9">
+                      <p>
+                        Join us on an unforgettable journey with Eco-Tours, a
+                        unique way to explore the rich tapestry of Batticaloa's
+                        local communities. Rather than just sightseeing,
+                        Eco-Tours offers the opportunity to fully immerse
+                        yourself in the vibrant heart of Batticaloa. We aim to
+                        redefine the way we travel by seamlessly integrating
+                        visitors with the local way of life. Imagine yourself
+                        not just as a tourist, but as a temporary local, forging
+                        lasting connections with the people and traditions of
+                        this enchanting destination.
+                      </p>
+                      <p>
+                        At the heart of Eco-Tours is a commitment to creating
+                        meaningful interactions between visitors and the diverse
+                        communities of Batticaloa. Our platform acts as a
+                        bridge, promoting a deep understanding of different
+                        lifestyles, encouraging eco-friendly practices, and
+                        advocating responsible tourism. We passionately believe
+                        in the preservation of Batticaloa's natural and cultural
+                        heritage, and we strive to ensure that our tours have a
+                        positive impact on both our guests and the local
+                        communities they encounter., ensuring that every
+                        traveler contributes positively to the destinations they
+                        explore. Moreover, by empowering local communities
+                        through tourism-related activities, Eco-Tours creates
+                        economic opportunities that not only sustain the region
+                        but also enrich the lives of those who call Batticaloa
+                        home. Join us on a journey where the threads of travel
+                        weave a tapestry of shared experiences, fostering
+                        connection, appreciation, and a legacy of responsible
+                        exploration.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="story_thumb">
+                  <div class="row">
+                    <div class="col-lg-5 col-md-6">
+                      <div class="thumb padd_1">
+                        <img src="img/spm-tours/spm-tours-about-1.jpg" alt="" />
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                      <div class="thumb">
+                        <img src="img/spm-tours/spm-tours-about-2.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="counter_wrap">
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                      <div class="single_counter text-center">
+                        <h3 class="counter">378</h3>
+                        <p>Tour has done successfully</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                      <div class="single_counter text-center">
+                        <h3 class="counter">30</h3>
+                        <p>Yearly tour arrange</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                      <div class="single_counter text-center">
+                        <h3 class="counter">2263</h3>
+                        <p>Happy Clients</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="video_area video_bg1 overlay">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- <div class="video_wrap text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- <div class="video_wrap text-center">
                         <h3>Enjoy Video</h3>
                         <div class="video_icon">
                             <a class="popup-video video_play_button" href="https://www.youtube.com/watch?v=f59dDEk57i0">
@@ -204,105 +259,124 @@ include("db.php");
                             </a>
                         </div>
                     </div> -->
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-
 
     <div class="travel_variation_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_travel text-center">
-                        <div class="icon">
-                            <img src="img/svg_icon/1.svg" alt="">
-                        </div>
-                        <h3>Adventurers journey</h3>
-                        <p>Dive into the untamed beauty of Batticaloa's rivers and seas, where every wave carries the promise of new adventure.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_travel text-center">
-                        <div class="icon">
-                            <img src="img/svg_icon/2.svg" alt="">
-                        </div>
-                        <h3>Community engagement</h3>
-                        <p>Empower local communities through adventurous journeys, igniting tourism while fostering resilience and prosperity.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_travel text-center">
-                        <div class="icon">
-                            <img src="img/svg_icon/3.svg" alt="">
-                        </div>
-                        <h3>Grab your niche experience</h3>
-                        <p>Dive into the heart of this enchanting destination and carve out your niche amidst its vibrant culture and breathtaking landscapes.</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="single_travel text-center">
+              <div class="icon">
+                <img src="img/svg_icon/1.svg" alt="" />
+              </div>
+              <h3>Adventurers journey</h3>
+              <p>
+                Dive into the untamed beauty of Batticaloa's rivers and seas,
+                where every wave carries the promise of new adventure.
+              </p>
             </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="single_travel text-center">
+              <div class="icon">
+                <img src="img/svg_icon/2.svg" alt="" />
+              </div>
+              <h3>Community engagement</h3>
+              <p>
+                Empower local communities through adventurous journeys, igniting
+                tourism while fostering resilience and prosperity.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="single_travel text-center">
+              <div class="icon">
+                <img src="img/svg_icon/3.svg" alt="" />
+              </div>
+              <h3>Grab your niche experience</h3>
+              <p>
+                Dive into the heart of this enchanting destination and carve out
+                your niche amidst its vibrant culture and
+                breathtaking landscapes.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-
 
     <!-- testimonial_area  -->
     <div class="testimonial_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="testmonial_active owl-carousel">
-                        <div class="single_carousel">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="single_testmonial text-center">
-                                        <div class="author_thumb">
-                                            <img src="img/testmonial/author.png" alt="">
-                                        </div>
-                                        <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>
-                                        <div class="testmonial_author">
-                                            <h3>- Micky Mouse</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_carousel">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="single_testmonial text-center">
-                                        <div class="author_thumb">
-                                            <img src="img/testmonial/author.png" alt="">
-                                        </div>
-                                        <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>
-                                        <div class="testmonial_author">
-                                            <h3>- Tom Mouse</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_carousel">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="single_testmonial text-center">
-                                        <div class="author_thumb">
-                                            <img src="img/testmonial/author.png" alt="">
-                                        </div>
-                                        <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>
-                                        <div class="testmonial_author">
-                                            <h3>- Jerry Mouse</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="testmonial_active owl-carousel">
+              <div class="single_carousel">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    <div class="single_testmonial text-center">
+                      <div class="author_thumb">
+                        <img src="img/testmonial/author.png" alt="" />
+                      </div>
+                      <p>
+                        "Working in conjunction with humanitarian aid agencies,
+                        we have supported programmes to help alleviate human
+                        suffering.
+                      </p>
+                      <div class="testmonial_author">
+                        <h3>- Micky Mouse</h3>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
+              <div class="single_carousel">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    <div class="single_testmonial text-center">
+                      <div class="author_thumb">
+                        <img src="img/testmonial/author.png" alt="" />
+                      </div>
+                      <p>
+                        "Working in conjunction with humanitarian aid agencies,
+                        we have supported programmes to help alleviate human
+                        suffering.
+                      </p>
+                      <div class="testmonial_author">
+                        <h3>- Tom Mouse</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="single_carousel">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    <div class="single_testmonial text-center">
+                      <div class="author_thumb">
+                        <img src="img/testmonial/author.png" alt="" />
+                      </div>
+                      <p>
+                        "Working in conjunction with humanitarian aid agencies,
+                        we have supported programmes to help alleviate human
+                        suffering.
+                      </p>
+                      <div class="testmonial_author">
+                        <h3>- Jerry Mouse</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- /testimonial_area  -->
-
 
     <!-- <div class="recent_trip_area">
         <div class="container">
@@ -366,150 +440,160 @@ include("db.php");
         </div>
     </div> -->
 
-
-
     <footer class="footer">
-        <div class="footer_top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 col-lg-4 ">
-                        <div class="footer_widget">
-                            <div class="footer_logo">
-                                <a href="#">
-                                    <img src="img/spm-w.png" alt="">
-                                </a>
-                            </div>
-                            <p>No: 57 Lloyd's Ave,<br>
-                                Batticaloa 30000,<br>
-                                Sri Lanka. <br>
-                                <a href="#">+(94)76 664 6404</a> <br>
-                                <a href="#">info@spmlk.tech</a>
-                            </p>
-                            <div class="socail_links">
-                                <ul>
-                                    <li>
-                                        <a href="https://www.facebook.com/spmlk.tech/">
-                                            <i class="ti-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com/spm_tech">
-                                            <i class="ti-twitter-alt"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/spmlk.tech/">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/channel/UCKbvgaE_s5wPsAEgoFcaykg">
-                                            <i class="fa fa-youtube-play"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-md-6 col-lg-2">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Company
-                            </h3>
-                            <ul class="links">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="elements.html">Tourism News</a></li>
-                                <li><a href="contact.html"> Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 col-lg-3">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Popular destination
-                            </h3>
-                            <ul class="links double_links">
-                                <li><a href="destination_details.html">Lagoon Sail</a></li>
-                                <li><a href="destination_details2.html">Vaadi Culinary</a></li>
-                                <li><a href="destination_details3.html">Coconut Artistry</a></li>
-                                <li><a href="destination_details4.html">Toddy Bliss</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 col-lg-3">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Instagram
-                            </h3>
-                            <div class="instagram_feed">
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="img/instagram/1.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="img/instagram/2.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="img/instagram/3.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="img/instagram/4.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="img/instagram/5.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="img/instagram/6.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="footer_top">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 col-md-6 col-lg-4">
+              <div class="footer_widget">
+                <div class="footer_logo">
+                  <a href="#">
+                    <img src="img/spm-w.png" alt="" />
+                  </a>
                 </div>
-            </div>
-        </div>
-        <div class="copy-right_text">
-            <div class="container">
-                <div class="footer_border"></div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <p class="copy_right text-center">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://spmlk.tech" target="_blank">SPM</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-                    </div>
+                <p>
+                  No: 57 Lloyd's Ave,<br />
+                  Batticaloa 30000,<br />
+                  Sri Lanka. <br />
+                  <a href="#">+(94)76 664 6404</a> <br />
+                  <a href="#">info@spmlk.tech</a>
+                </p>
+                <div class="socail_links">
+                  <ul>
+                    <li>
+                      <a href="https://www.facebook.com/spmlk.tech/">
+                        <i class="ti-facebook"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/spm_tech">
+                        <i class="ti-twitter-alt"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/spmlk.tech/">
+                        <i class="fa fa-instagram"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.youtube.com/channel/UCKbvgaE_s5wPsAEgoFcaykg"
+                      >
+                        <i class="fa fa-youtube-play"></i>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
+              </div>
             </div>
+            <div class="col-xl-2 col-md-6 col-lg-2">
+              <div class="footer_widget">
+                <h3 class="footer_title">Company</h3>
+                <ul class="links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="elements.html">Tourism News</a></li>
+                  <li><a href="contact.html"> Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-lg-3">
+              <div class="footer_widget">
+                <h3 class="footer_title">Popular destination</h3>
+                <ul class="links double_links">
+                  <li><a href="destination_details.html">Lagoon Sail</a></li>
+                  <li>
+                    <a href="destination_details2.html">Vaadi Culinary</a>
+                  </li>
+                  <li>
+                    <a href="destination_details3.html">Coconut Artistry</a>
+                  </li>
+                  <li><a href="destination_details4.html">Toddy Bliss</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-lg-3">
+              <div class="footer_widget">
+                <h3 class="footer_title">Instagram</h3>
+                <div class="instagram_feed">
+                  <div class="single_insta">
+                    <a href="#">
+                      <img src="img/instagram/1.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="single_insta">
+                    <a href="#">
+                      <img src="img/instagram/2.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="single_insta">
+                    <a href="#">
+                      <img src="img/instagram/3.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="single_insta">
+                    <a href="#">
+                      <img src="img/instagram/4.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="single_insta">
+                    <a href="#">
+                      <img src="img/instagram/5.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="single_insta">
+                    <a href="#">
+                      <img src="img/instagram/6.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="copy-right_text">
+        <div class="container">
+          <div class="footer_border"></div>
+          <div class="row">
+            <div class="col-xl-12">
+              <p class="copy_right text-center">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                All rights reserved | This template is made with
+                <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                <a href="https://spmlk.tech" target="_blank">SPM</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
-
-  <!-- Modal -->
-  <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="serch_form">
-            <input type="text" placeholder="Search" >
+    <!-- Modal -->
+    <div
+      class="modal fade custom_search_pop"
+      id="exampleModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="serch_form">
+            <input type="text" placeholder="Search" />
             <button type="submit">search</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
     <!-- link that opens popup -->
-<!--     
+    <!--     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
 
@@ -534,9 +618,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/plugins.js"></script>
     <script src="js/gijgo.min.js"></script>
     <script src="js/slick.min.js"></script>
-   
 
-    
     <!--contact js-->
     <script src="js/contact.js"></script>
     <script src="js/jquery.ajaxchimp.min.js"></script>
@@ -544,16 +626,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/mail-script.js"></script>
 
-
     <script src="js/main.js"></script>
     <script>
-        $('#datepicker').datepicker({
-            iconsLibrary: 'fontawesome',
-            icons: {
-             rightIcon: '<span class="fa fa-caret-down"></span>'
-         }
-        });
+      $("#datepicker").datepicker({
+        iconsLibrary: "fontawesome",
+        icons: {
+          rightIcon: '<span class="fa fa-caret-down"></span>',
+        },
+      });
     </script>
-</body>
-
+  </body>
 </html>
